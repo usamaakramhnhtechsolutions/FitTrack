@@ -20,6 +20,11 @@
     align-items: center;
     justify-content: space-around;
 }
+
+h1 {
+    color: #0c0c0c;
+    -webkit-text-stroke: 2px white;
+}
 .landing-header #landing-video {
     position: absolute;
     width: 100%;
