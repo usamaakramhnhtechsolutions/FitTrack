@@ -24,6 +24,7 @@ import A1069_0_thumb from "../asset/images/exercises/1069_0_thumb.jpg"
 import A1066_0_thumb from "../asset/images/exercises/1066_0_thumb.jpg"
 import Auser11 from "../asset/images/exercises/user/11.jpg"
 import Auser23794 from "../asset/images/exercises/user/23794.jpg"
+import Navbar from './Navber';
 
 
 const Landing = () => {
@@ -98,7 +99,9 @@ const Landing = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100">
+<>
+<Navbar />
+<div className="min-h-screen bg-gray-100">
        <div>
       {/* Background Image and Title */}
       <div className="relative flex items-center justify-center bg-blue-500 h-60">
@@ -271,6 +274,7 @@ const Landing = () => {
         </div>
       </div>
     </div>
+</>
   );
 };
 
