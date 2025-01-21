@@ -20,6 +20,7 @@
     align-items: center;
     justify-content: space-around;
 }
+
 .landing-header #landing-video {
     position: absolute;
     width: 100%;
