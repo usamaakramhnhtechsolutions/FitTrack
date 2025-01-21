@@ -2,12 +2,12 @@ import React from 'react'
 
 export default function Community() {
     const videos = [
-        { thumbnail: "/video1.jpg" },
-        { thumbnail: "/video2.jpg" },
-        { thumbnail: "/video2.jpg" },
-        { thumbnail: "/video2.jpg" },
-        { thumbnail: "/video2.jpg" },
-        { thumbnail: "/video2.jpg" },
+        { thumbnail: "https://blog.myfitnesspal.com/wp-content/uploads/sb-instagram-feed-images/449869752_1190033192188698_9219607026006752834_nfull.jpg" },
+        { thumbnail: "https://blog.myfitnesspal.com/wp-content/uploads/sb-instagram-feed-images/449798394_7686257058095191_6393819362286198216_nfull.jpg" },
+        { thumbnail: "https://blog.myfitnesspal.com/wp-content/uploads/sb-instagram-feed-images/449767478_1164111331501625_5379550121418456729_nfull.jpg" },
+        { thumbnail: "https://blog.myfitnesspal.com/wp-content/uploads/sb-instagram-feed-images/449650656_1203890447452702_6020527130641490401_nfull.jpg" },
+        { thumbnail: "https://blog.myfitnesspal.com/wp-content/uploads/sb-instagram-feed-images/449208276_1843551756155477_3021934300159537859_nfull.jpg" },
+        { thumbnail: "https://blog.myfitnesspal.com/wp-content/uploads/sb-instagram-feed-images/449207884_331963179955199_6725560085871298996_nfull.jpg" },
         { thumbnail: "/video2.jpg" },
         { thumbnail: "/video2.jpg" },
         // Add more videos here...
