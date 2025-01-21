@@ -3,7 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Exercises from "../asset/img/exercises.jpg";
 import Exer from "../asset/images/category_chest.jpg";
-import Exer2 from "../asset/images/blank.png";
+// import Exer2 from "../asset/images/blank.png";
 import Exer3 from "../asset/images/category_biceps.jpg"
 import Exer4 from "../asset/images/category_triceps.jpg"
 import Exer5 from "../asset/images/category_back.jpg"
@@ -12,7 +12,7 @@ import Exer7 from "../asset/images/category_legs.jpg"
 import Exer8 from "../asset/images/category_abdominal.jpg"
 import Exer9 from "../asset/images/category_combined.jpg"
 import Exer10 from "../asset/images/category_cardio.jpg"
-import Abdominal from "../asset/images/exercises/1077_0_thumb.jpg"
+// import Abdominal from "../asset/images/exercises/1077_0_thumb.jpg"
 import A1076_0_thumb from "../asset/images/exercises/1076_0_thumb.jpg"
 import A1312_0_thumb from "../asset/images/exercises/1312_0_thumb.jpg"
 import A1075_0_thumb from "../asset/images/exercises/1075_0_thumb.jpg"
@@ -24,7 +24,8 @@ import A1069_0_thumb from "../asset/images/exercises/1069_0_thumb.jpg"
 import A1066_0_thumb from "../asset/images/exercises/1066_0_thumb.jpg"
 import Auser11 from "../asset/images/exercises/user/11.jpg"
 import Auser23794 from "../asset/images/exercises/user/23794.jpg"
-import Navbar from './Navber';
+import Recipes from './Recipes';
+import Community from './Community';
 
 
 const Landing = () => {
@@ -100,7 +101,6 @@ const Landing = () => {
 
   return (
 <>
-<Navbar />
 <div className="min-h-screen bg-gray-100">
        <div>
       {/* Background Image and Title */}
@@ -124,7 +124,7 @@ const Landing = () => {
       </div>
 
       {/* Section Title */}
-      <h2 className="mt-8 text-2xl font-semibold text-center">Exercise List</h2>
+      <h2 className="mt-5 text-2xl font-semibold text-center">Exercise List</h2>
     </div>
       {/* Top Images */}
       <div className="grid container justify-self-center grid-cols-3 gap-4 p-5 mx-5 w-[90%]" >
@@ -274,6 +274,8 @@ const Landing = () => {
         </div>
       </div>
     </div>
+    <Recipes />
+    <Community />
 </>
   );
 };

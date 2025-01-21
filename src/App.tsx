@@ -10,6 +10,7 @@ import Progress from './pages/Progress';
 import Nutrition from './pages/Nutrition';
 import Layout from './components/Layout';
 import Landing from './pages/Landing';
+import Navbar from './pages/Navber';
 
 // const PrivateRoute = ({ children }: { children: React.ReactNode }) => {
 //   const { user } = useAuth();
@@ -22,12 +23,14 @@ const PrivateRoute = ({ children }: { children: React.ReactNode }) => {
 };
 
 function App() {
+  const auth = localStorage.getItem('token');
   return (
     <AuthProvider>
       <Router>
+        {auth ? '' : <Navbar />}
         <Routes>
           <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+          <Route path="/signup" element={<Register />} />
           <Route path="/landing" element={<Landing />} />
           <Route
             path="/"
