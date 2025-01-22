@@ -23,9 +23,7 @@ import A1070_0_thumb from "../asset/images/exercises/1070_0_thumb.jpg"
 import A1069_0_thumb from "../asset/images/exercises/1069_0_thumb.jpg"
 import A1066_0_thumb from "../asset/images/exercises/1066_0_thumb.jpg"
 import Auser11 from "../asset/images/exercises/user/11.jpg"
-import Auser23794 from "../asset/images/exercises/user/23794.jpg"
-import Recipes from './Recipes';
-import Community from './Community';
+import Auser23794 from "../asset/images/exercises/user/23794.jpg";
 
 
 const Landing = () => {
@@ -242,7 +240,7 @@ const Landing = () => {
       <h2 className="my-6 text-2xl font-semibold text-center">Abdominal</h2>
 
       {/* Exercise Table */}
-      <div className="container p-5 mx-auto mb-16">
+      <div className="container px-5 mx-auto mb-5">
         <div className="overflow-x-auto">
           <table className="min-w-full bg-white rounded-lg shadow-lg">
             <thead>
@@ -274,8 +272,6 @@ const Landing = () => {
         </div>
       </div>
     </div>
-    <Recipes />
-    <Community />
 </>
   );
 };

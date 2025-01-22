@@ -11,6 +11,9 @@ import Nutrition from './pages/Nutrition';
 import Layout from './components/Layout';
 import Landing from './pages/Landing';
 import Navbar from './pages/Navber';
+import Food from './pages/Food';
+import Footer from './pages/Footer';
+import MobileSidebar from './pages/MobileSidebar';
 
 // const PrivateRoute = ({ children }: { children: React.ReactNode }) => {
 //   const { user } = useAuth();
@@ -27,11 +30,12 @@ function App() {
   return (
     <AuthProvider>
       <Router>
-        {auth ? '' : <Navbar />}
+          {auth ? <MobileSidebar /> : <Navbar />}
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Register />} />
-          <Route path="/landing" element={<Landing />} />
+          <Route path="/exercise" element={<Landing />} />
+          <Route path="/food" element={<Food />} />
           <Route
             path="/"
             element={
@@ -47,6 +51,7 @@ function App() {
             <Route path="nutrition" element={<Nutrition />} />
           </Route>
         </Routes>
+        <Footer />
       </Router>
     </AuthProvider>
   );

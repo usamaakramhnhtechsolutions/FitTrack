@@ -166,12 +166,12 @@ export default function Register() {
         </div>
 
         <div className="text-sm text-center">
-          <a
-            href="/login"
+          <Link
+            to="/login"
             className="font-medium text-indigo-600 hover:text-indigo-500"
           >
             Already have an account? Sign in
-          </a>
+          </Link>
         </div>
       </form>
       </div>

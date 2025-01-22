@@ -1,15 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Recipes() {
+
+  useEffect(() => {
+    AOS.init({
+      offset: 200,
+      duration: 500,
+      easing: 'ease-in-sine',
+      delay: 100,
+    });
+  }, []);
     const recipes = [
         {
           title: "Protein-Packed Cottage Cheese Queso",
           image: "https://blog.myfitnesspal.com/wp-content/uploads/2024/09/cottage-cheese-queso.jpg",
           nutrition: [
-            { label: "Calories", value: "150" },
-            { label: "Carbs", value: "12g" },
-            { label: "Fat", value: "5g" },
-            { label: "Protein", value: "14g" },
+            { label: "Calories", value: "322" },
+            { label: "Carbs", value: "7g" },
+            { label: "Fat", value: "18.5g" },
+            { label: "Protein", value: "28.5a" },
           ],
         },
         {
@@ -27,7 +38,7 @@ export default function Recipes() {
             image: "https://blog.myfitnesspal.com/wp-content/uploads/2024/12/low_sugar_pumpkin_pie.jpeg",
             nutrition: [
               { label: "Calories", value: "148" },
-              { label: "Carbs", value: "12g" },
+              { label: "Carbs", value: "3.7g" },
               { label: "Fat", value: "6.9g" },
               { label: "Protein", value: "7.4ag" },
             ],
@@ -42,7 +53,7 @@ export default function Recipes() {
             {recipes.map((recipe, index) => (
               <div
                 key={index}
-                className="min-w-[400px] border rounded-lg shadow hover:shadow-lg p-4"
+                className="min-w-[350px] border rounded-lg shadow hover:shadow-lg p-4" data-aos="fade-right"
               >
                 <img
                   src={recipe.image}
@@ -61,7 +72,7 @@ export default function Recipes() {
             ))}
           </div>
           <div className="mt-4 text-center">
-            <a href="#" className="text-blue-500 hover:underline">
+            <a href="#" className="text-indigo-600 hover:underline">
               See More Recipes
             </a>
           </div>

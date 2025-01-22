@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // import { Button } from "./Button";
 import { Dumbbell, Menu } from "lucide-react";
 import { Link, useResolvedPath } from "react-router-dom";
-// import Link from "next/link";
-// import { usePathname } from "next/navigation";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Navbar() {
   const pathname = useResolvedPath();
@@ -11,14 +11,23 @@ export default function Navbar() {
 
   const isActive = (path: string) => pathname === path;
 
+  useEffect(() => {
+    AOS.init({
+      offset: 200,
+      duration: 900,
+      easing: 'ease-in-sine',
+      delay: 100,
+    });
+  }, []);
+
   return (
     <nav className="sticky top-0 z-50 bg-white border-b">
       <div className="px-4 mx-auto max-w-7xl">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <Dumbbell className="h-8 w-8 text-[#0066EE]" />
-              <span className="ml-2 text-xl font-bold">MyFitnessPal</span>
+              <Dumbbell data-aos="flip-right" className="w-8 h-8 text-indigo-600" />
+              <span className="ml-2 text-xl font-bold">FitTrack</span>
             </Link>
           </div>
 
@@ -26,28 +35,13 @@ export default function Navbar() {
           <div className="items-center hidden space-x-8 lg:flex">
             <div className="flex space-x-4">
               <Link to="/food">
-                <button className={isActive("/food") ? "text-[#0066EE]" : ""}>
+                <button className={isActive("/food") ? " text-indigo-600" : ""}>
                   Food
                 </button>
               </Link>
               <Link to="/exercise">
-                <button className={isActive("/exercise") ? "text-[#0066EE]" : ""}>
+                <button className={isActive("/exercise") ? " text-indigo-600" : ""}>
                   Exercise
-                </button>
-              </Link>
-              <Link to="/apps">
-                <button className={isActive("/apps") ? "text-[#0066EE]" : ""}>
-                  Apps
-                </button>
-              </Link>
-              <Link to="/community">
-                <button className={isActive("/community") ? "text-[#0066EE]" : ""}>
-                  Community
-                </button>
-              </Link>
-              <Link to="/premium">
-                <button className={isActive("/premium") ? "text-[#0066EE]" : ""}>
-                  Premium
                 </button>
               </Link>
             </div>
@@ -56,7 +50,7 @@ export default function Navbar() {
                 <button>Log In</button>
               </Link>
               <Link to="/signup">
-                <button type="button" className="p-2 rounded text-white bg-[#0066EE] hover:bg-[#0052CC]">Sign Up</button>
+                <button type="button" className="p-2 text-white bg-indigo-600 rounded hover:bg-indigo-800">Sign Up</button>
               </Link>
             </div>
           </div>
@@ -83,28 +77,13 @@ export default function Navbar() {
                   Exercise
                 </button>
               </Link>
-              <Link to="/apps">
-                <button className="justify-start w-full">
-                  Apps
-                </button>
-              </Link>
-              <Link to="/community">
-                <button className="justify-start w-full">
-                  Community
-                </button>
-              </Link>
-              <Link to="/premium">
-                <button className="justify-start w-full">
-                  Premium
-                </button>
-              </Link>
               <Link to="/login">
                 <button className="justify-start w-full">
                   Log In
                 </button>
               </Link>
               <Link to="/signup">
-                <button className="w-full bg-[#0066EE] hover:bg-[#0052CC]">
+                <button className="w-full p-1 text-white bg-indigo-600 rounded hover:bg-indigo-800">
                   Sign Up
                 </button>
               </Link>

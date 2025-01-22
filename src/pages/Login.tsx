@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Dumbbell } from 'lucide-react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import VideoHero from '../asset/img/exercises.jpg'
 
 export default function Login() {
-  const navigate = useNavigate();
   const [error, setError] = useState('');
+  const navigate = useNavigate();
 
     useEffect(() => {
       AOS.init({
@@ -142,9 +142,9 @@ export default function Login() {
         </div>
 
         <div className="text-sm text-center">
-          <a href="/signup" className="font-medium text-indigo-600 hover:text-indigo-500">
+          <Link to="/signup" className="font-medium text-indigo-600 hover:text-indigo-500">
             Don't have an account? Sign up
-          </a>
+          </Link>
         </div>
       </form>
       </div>
